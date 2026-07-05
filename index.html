@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSafe AI - Smart Cybersecurity Awareness Platform</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<header>
+
+<nav>
+
+<div class="logo">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+CyberSafe AI
+
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#chatbot">Chatbot</a></li>
+
+<li><a href="#password">Password Checker</a></li>
+
+<li><a href="#quiz">Quiz</a></li>
+
+<li><a href="#alerts">Scam Alerts</a></li>
+
+<li><a href="#tips">Safety Tips</a></li>
+
+<li><a href="#complaint">Complaint</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- Hero -->
+
+<section id="home" class="hero">
+
+<h1>CyberSafe AI</h1>
+
+<h2>Smart Cybersecurity Awareness Platform</h2>
+
+<p>
+
+Stay Safe Online using AI-powered Cyber Awareness Tools.
+
+Learn about phishing, password security, online scams,
+
+QR frauds, UPI safety and much more.
+
+</p>
+
+<button onclick="showChat()">
+
+Start Learning
+
+</button>
+
+</section>
+
+<!-- Dashboard -->
+
+<section class="dashboard">
+
+<h2>Platform Features</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-robot"></i>
+
+<h3>AI Chatbot</h3>
+
+<p>
+
+Ask cybersecurity questions anytime.
+
+</p>
+
+<button onclick="showChat()">
+
+Open
+
+</button>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-lock"></i>
+
+<h3>Password Checker</h3>
+
+<p>
+
+Check password strength and crack time.
+
+</p>
+
+<button onclick="showPassword()">
+
+Open
+
+</button>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h3>Cyber Quiz</h3>
+
+<p>
+
+Test your cybersecurity knowledge.
+
+</p>
+
+<button onclick="showQuiz()">
+
+Open
+
+</button>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-triangle-exclamation"></i>
+
+<h3>Scam Alerts</h3>
+
+<p>
+
+Latest cyber scam awareness.
+
+</p>
+
+<button onclick="showScam()">
+
+Open
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Dynamic Content -->
+
+
+<!-- Safety Tips --><!-- Chatbot Section -->
+<section id="chatbot" class="section">
+
+<h2>🤖 CyberSafe AI Chatbot</h2>
+
+<div class="info-card">
+
+<div id="chatBox" style="height:300px;overflow-y:auto;border:1px solid #ccc;padding:10px;margin-bottom:15px;"></div>
+
+<input
+type="text"
+id="userInput"
+placeholder="Ask about cyber security...">
+
+<br><br>
+
+<button onclick="sendMessage()">
+Send
+</button>
+
+</div>
+
+</section>
+
+<!-- Password Checker -->
+<section id="password" class="section">
+
+<h2>🔐 Password Strength Checker</h2>
+
+<div class="info-card">
+
+<input
+type="password"
+id="passwordInput"
+placeholder="Enter your password">
+
+<br><br>
+
+<button onclick="checkPassword()">
+Check Password
+</button>
+
+<br><br>
+
+<div id="passwordResult"></div>
+
+</div>
+
+</section>
+
+<!-- Quiz Section -->
+<section id="quiz" class="section">
+
+<h2>📝 Cyber Security Quiz</h2>
+
+<div class="info-card">
+
+<div id="quizContainer"></div>
+
+<button onclick="startQuiz()">
+Start Quiz
+</button>
+
+</div>
+
+</section>
+
+<!-- Scam Alerts -->
+<section id="alerts" class="section">
+
+<h2>🚨 Latest Scam Alerts</h2>
+
+<div class="info-card">
+
+<ul>
+<li>⚠️ Never share OTP with anyone.</li>
+<li>⚠️ Beware of fake bank calls.</li>
+<li>⚠️ Don't scan unknown QR codes.</li>
+<li>⚠️ Verify UPI payment requests before paying.</li>
+<li>⚠️ Don't click suspicious email or SMS links.</li>
+</ul>
+
+</div>
+
+</section>
+
+<section id="tips" class="section">
+
+<h2>🛡️ Cyber Safety Tips</h2>
+
+<div class="info-card">
+<ul>
+<li>✅ Never share your OTP or banking PIN.</li>
+<li>✅ Use strong passwords with uppercase, lowercase, numbers and symbols.</li>
+<li>✅ Enable Two-Factor Authentication (2FA).</li>
+<li>✅ Verify websites before entering personal information.</li>
+<li>✅ Keep your software and antivirus updated.</li>
+<li>✅ Don't click suspicious email or SMS links.</li>
+<li>✅ Avoid using public Wi-Fi for banking transactions.</li>
+<li>✅ Always log out from shared devices.</li>
+</ul>
+<br>
+<button onclick="showRandomTip()">
+    Show Random Safety Tips
+</button>
+</div>
+
+</section>
+
+<!-- Cyber Crime Complaint -->
+
+<section id="complaint" class="section">
+
+<h2>📞 Cyber Crime Complaint</h2>
+
+<div class="info-card">
+
+<p><strong>National Cyber Crime Helpline:</strong> 1930</p>
+
+<p>
+<strong>Online Complaint Portal:</strong><br>
+<a href="https://cybercrime.gov.in"target="_bank">
+    https://cybercrime.gov.in
+</a>
+</p>
+
+<p>
+Report immediately if you experience:
+</p>
+
+<ul>
+<li>UPI Fraud</li>
+<li>QR Code Scam</li>
+<li>Online Banking Fraud</li>
+<li>Identity Theft</li>
+<li>Social Media Account Hacking</li>
+</ul>
+
+</div>
+
+</section>
+
+<!-- About -->
+
+<section id="about" class="section">
+
+<h2>ℹ️ About CyberSafe AI</h2>
+
+<div class="info-card">
+
+<p>
+
+CyberSafe AI is a Smart Cybersecurity Awareness Platform
+developed as a Community Service Project (CSP).
+
+The platform helps users learn cybersecurity through an
+AI chatbot, password analysis, quizzes, scam awareness,
+and cyber safety education.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact" class="section">
+
+<h2>📧 Contact Us</h2>
+
+<div class="info-card">
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email">
+
+<textarea placeholder="Your Message"></textarea>
+
+<button type="submit">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+<p>
+
+© 2026 CyberSafe AI | Smart Cybersecurity Awareness Platform
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
