@@ -478,3 +478,66 @@ setInterval(showRandomTip, 30000);
 setTimeout(function() {
 alert("👋 Welcome to CyberSafe AI!\nStay alert. Stay secure.");
 }, 1000);
+// ===============================
+// Phishing Link Checker
+// ===============================
+
+function checkPhishing() {
+
+const url = document.getElementById("phishingInput").value.trim().toLowerCase();
+
+const result = document.getElementById("phishingResult");
+
+if (url === "") {
+    result.innerHTML = "<span style='color:red;'>Please enter a website link.</span>";
+    return;
+}
+
+const suspiciousWords = [
+"login",
+"verify",
+"secure",
+"update",
+"free",
+"gift",
+"bonus",
+"bank",
+"paypal",
+"amazon",
+"otp"
+];
+
+let suspicious = false;
+
+for (let word of suspiciousWords) {
+    if (url.includes(word)) {
+        suspicious = true;
+        break;
+    }
+}
+
+if (
+    suspicious ||
+    url.includes("@") ||
+    url.includes("bit.ly") ||
+    url.includes("tinyurl") ||
+    url.includes("goo.gl")
+) {
+
+    result.innerHTML = `
+    <h3 style="color:red;">⚠️ Warning!</h3>
+    <p>This link looks suspicious.</p>
+    <p>Always verify the website before clicking.</p>
+    `;
+
+} else {
+
+    result.innerHTML = `
+    <h3 style="color:green;">✅ Looks Safe</h3>
+    <p>No common phishing signs were detected.</p>
+    <p><b>Note:</b> This is a basic educational checker, not a real security scanner.</p>
+    `;
+
+}
+
+}
