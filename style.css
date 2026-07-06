@@ -253,5 +253,20 @@ font-size:36px;
 .hero p{
 width:95%;
 }
+}
+/* ===============================
+   Phishing Checker
+================================ */
 
+#phishing input {
+    width: 80%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#phishingResult {
+    margin-top: 20px;
+    font-size: 18px;
 }
