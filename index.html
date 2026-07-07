@@ -1,52 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberSafe AI - Smart Cybersecurity Awareness Platform</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>CyberSafe AI - Smart Cybersecurity Awareness Platform</title>
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
 <body>
 
-<!-- Navigation -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
 <nav>
 
 <div class="logo">
-
 <i class="fa-solid fa-shield-halved"></i>
-
 CyberSafe AI
-
 </div>
 
 <ul>
 
 <li><a href="#home">Home</a></li>
-
 <li><a href="#chatbot">Chatbot</a></li>
-
-<li><a href="#password">Password Checker</a></li>
-
-<li><a href="#phishing">phishing Checker</a></li>
-
-
+<li><a href="#password">Password</a></li>
+<li><a href="#phishing">Phishing</a></li>
 <li><a href="#quiz">Quiz</a></li>
-
 <li><a href="#alerts">Scam Alerts</a></li>
-
 <li><a href="#tips">Safety Tips</a></li>
-
 <li><a href="#complaint">Complaint</a></li>
-
+<li><a href="#about">About</a></li>
 <li><a href="#contact">Contact</a></li>
 
 </ul>
@@ -55,7 +46,7 @@ CyberSafe AI
 
 </header>
 
-<!-- Hero -->
+<!-- ================= HERO ================= -->
 
 <section id="home" class="hero">
 
@@ -65,11 +56,9 @@ CyberSafe AI
 
 <p>
 
-Stay Safe Online using AI-powered Cyber Awareness Tools.
-
-Learn about phishing, password security, online scams,
-
-QR frauds, UPI safety and much more.
+Stay safe online using AI-powered cybersecurity awareness tools.
+Learn about phishing attacks, password security,
+UPI scams, QR frauds and safe internet practices.
 
 </p>
 
@@ -81,7 +70,7 @@ Start Learning
 
 </section>
 
-<!-- Dashboard -->
+<!-- ================= FEATURES ================= -->
 
 <section class="dashboard">
 
@@ -95,11 +84,7 @@ Start Learning
 
 <h3>AI Chatbot</h3>
 
-<p>
-
-Ask cybersecurity questions anytime.
-
-</p>
+<p>Ask cyber security questions anytime.</p>
 
 <button onclick="showChat()">
 
@@ -115,13 +100,25 @@ Open
 
 <h3>Password Checker</h3>
 
-<p>
-
-Check password strength and crack time.
-
-</p>
+<p>Check password strength and crack time.</p>
 
 <button onclick="showPassword()">
+
+Open
+
+</button>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-fish"></i>
+
+<h3>Phishing Checker</h3>
+
+<p>Detect suspicious website links.</p>
+
+<button onclick="document.getElementById('phishing').scrollIntoView({behavior:'smooth'})">
 
 Open
 
@@ -135,11 +132,7 @@ Open
 
 <h3>Cyber Quiz</h3>
 
-<p>
-
-Test your cybersecurity knowledge.
-
-</p>
+<p>Test your cyber security knowledge.</p>
 
 <button onclick="showQuiz()">
 
@@ -155,13 +148,25 @@ Open
 
 <h3>Scam Alerts</h3>
 
-<p>
-
-Latest cyber scam awareness.
-
-</p>
+<p>Latest cyber scam awareness.</p>
 
 <button onclick="showScam()">
+
+Open
+
+</button>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-user-shield"></i>
+
+<h3>Admin Dashboard</h3>
+
+<p>View registered users.</p>
+
+<button onclick="window.location.href='admin.html'">
 
 Open
 
@@ -172,11 +177,8 @@ Open
 </div>
 
 </section>
+<!-- ================= CHATBOT ================= -->
 
-<!-- Dynamic Content -->
-
-
-<!-- Safety Tips --><!-- Chatbot Section -->
 <section id="chatbot" class="section">
 
 <h2>🤖 CyberSafe AI Chatbot</h2>
@@ -188,7 +190,7 @@ Open
 <input
 type="text"
 id="userInput"
-placeholder="Ask about cyber security...">
+placeholder="Ask about cybersecurity...">
 
 <br><br>
 
@@ -200,7 +202,8 @@ Send
 
 </section>
 
-<!-- Password Checker -->
+<!-- ================= PASSWORD CHECKER ================= -->
+
 <section id="password" class="section">
 
 <h2>🔐 Password Strength Checker</h2>
@@ -225,14 +228,16 @@ Check Password
 </div>
 
 </section>
-[7:08 am, 6/7/2026] ..: <!-- Phishing Link Checker -->
+
+<!-- ================= PHISHING CHECKER ================= -->
+
 <section id="phishing" class="section">
 
 <h2>🎣 Phishing Link Checker</h2>
 
 <div class="info-card">
 
-<p>Paste a website link to check if it looks suspicious.</p>
+<p>Paste a website link below to check if it looks suspicious.</p>
 
 <input
 type="text"
@@ -252,8 +257,8 @@ Check Link
 </div>
 
 </section>
+<!-- ================= QUIZ ================= -->
 
-<!-- Quiz Section -->
 <section id="quiz" class="section">
 
 <h2>📝 Cyber Security Quiz</h2>
@@ -270,7 +275,8 @@ Start Quiz
 
 </section>
 
-<!-- Scam Alerts -->
+<!-- ================= SCAM ALERTS ================= -->
+
 <section id="alerts" class="section">
 
 <h2>🚨 Latest Scam Alerts</h2>
@@ -278,41 +284,63 @@ Start Quiz
 <div class="info-card">
 
 <ul>
-<li>⚠️ Never share OTP with anyone.</li>
+
+<li>⚠️ Never share your OTP with anyone.</li>
+
 <li>⚠️ Beware of fake bank calls.</li>
+
 <li>⚠️ Don't scan unknown QR codes.</li>
+
 <li>⚠️ Verify UPI payment requests before paying.</li>
+
 <li>⚠️ Don't click suspicious email or SMS links.</li>
+
 </ul>
 
 </div>
 
 </section>
+
+<!-- ================= SAFETY TIPS ================= -->
 
 <section id="tips" class="section">
 
 <h2>🛡️ Cyber Safety Tips</h2>
 
 <div class="info-card">
+
 <ul>
+
 <li>✅ Never share your OTP or banking PIN.</li>
+
 <li>✅ Use strong passwords with uppercase, lowercase, numbers and symbols.</li>
+
 <li>✅ Enable Two-Factor Authentication (2FA).</li>
+
 <li>✅ Verify websites before entering personal information.</li>
+
 <li>✅ Keep your software and antivirus updated.</li>
+
 <li>✅ Don't click suspicious email or SMS links.</li>
-<li>✅ Avoid using public Wi-Fi for banking transactions.</li>
+
+<li>✅ Avoid public Wi-Fi for banking transactions.</li>
+
 <li>✅ Always log out from shared devices.</li>
+
 </ul>
+
 <br>
+
 <button onclick="showRandomTip()">
-    Show Random Safety Tips
+
+Show Random Safety Tip
+
 </button>
+
 </div>
 
 </section>
-
-<!-- Cyber Crime Complaint -->
+<!-- ================= CYBER CRIME COMPLAINT ================= -->
 
 <section id="complaint" class="section">
 
@@ -323,29 +351,35 @@ Start Quiz
 <p><strong>National Cyber Crime Helpline:</strong> 1930</p>
 
 <p>
-<strong>Online Complaint Portal:</strong><br>
-<a href="https://cybercrime.gov.in"target="_bank">
-    https://cybercrime.gov.in
+<strong>Official Complaint Portal:</strong><br>
+
+<a href="https://cybercrime.gov.in" target="_blank">
+https://cybercrime.gov.in
 </a>
+
 </p>
 
-<p>
-Report immediately if you experience:
-</p>
+<p>Report immediately if you experience:</p>
 
 <ul>
+
 <li>UPI Fraud</li>
+
 <li>QR Code Scam</li>
+
 <li>Online Banking Fraud</li>
+
 <li>Identity Theft</li>
+
 <li>Social Media Account Hacking</li>
+
 </ul>
 
 </div>
 
 </section>
 
-<!-- About -->
+<!-- ================= ABOUT ================= -->
 
 <section id="about" class="section">
 
@@ -358,9 +392,9 @@ Report immediately if you experience:
 CyberSafe AI is a Smart Cybersecurity Awareness Platform
 developed as a Community Service Project (CSP).
 
-The platform helps users learn cybersecurity through an
-AI chatbot, password analysis, quizzes, scam awareness,
-and cyber safety education.
+It helps users improve cybersecurity awareness through
+an AI Chatbot, Password Checker, Phishing Checker,
+Cyber Quiz, Scam Alerts and Safety Tips.
 
 </p>
 
@@ -368,7 +402,7 @@ and cyber safety education.
 
 </section>
 
-<!-- Contact -->
+<!-- ================= CONTACT ================= -->
 
 <section id="contact" class="section">
 
@@ -380,14 +414,12 @@ and cyber safety education.
 
 <input type="text" placeholder="Your Name">
 
-<input type="email" placeholder="Email">
+<input type="email" placeholder="Your Email">
 
 <textarea placeholder="Your Message"></textarea>
 
 <button type="submit">
-
 Send Message
-
 </button>
 
 </form>
@@ -396,7 +428,7 @@ Send Message
 
 </section>
 
-<!-- Footer -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -411,5 +443,4 @@ Send Message
 <script src="script.js"></script>
 
 </body>
-
 </html>
