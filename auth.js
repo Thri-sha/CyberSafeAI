@@ -105,7 +105,7 @@ message.innerHTML="Login Successful!";
 
 setTimeout(()=>{
 
-window.location.href="index.html";
+window.location.href="home.html";
 
 },1500);
 
